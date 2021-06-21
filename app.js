@@ -1,24 +1,25 @@
 const time = document.querySelector("#time");
-let currentTime = 5;
+let seconds = 23;
+let minutes = 1;
+let currentS;
 
 const timerId = setInterval(decreaseTime, 1000);
-
-if (currentTime < 10) {
-  current = `0${currentTime}`;
-}
-time.innerHTML = `00:0${currentTime}`;
+ifLessTenSeconds();
+time.innerHTML = `00:${currentS}`;
 
 function decreaseTime() {
-  let current = --currentTime;
-  if (current <= 0) {
+  currentS = --seconds;
+  if (currentS <= 0) {
     clearInterval(timerId);
   }
-  if (current < 10) {
-    current = `0${current}`;
-  }
-
-  time.innerHTML = `00:${current}`;
+  ifLessTenSeconds();
+  time.innerHTML = `00:${currentS}`;
 }
-// function ifLessTen(){
-    
-// }
+
+function ifLessTenSeconds() {
+  if (seconds < 10) {
+    return (currentS = `0${seconds}`);
+  } else {
+    (currentS = `${seconds}`)
+  }
+}
