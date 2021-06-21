@@ -3,4 +3,20 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
+    text-align: center;
+    background-color: rgb(42, 39, 39);
+}
+input, button{
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    height: 30px;
+    padding: 0 10px;
+    outline: none;
+}
+button{
+    margin: 0 auto;
+}
+#time {
+    color: white;
 }
